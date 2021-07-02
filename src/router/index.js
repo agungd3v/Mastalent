@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {SplashScreen, Home, Profile} from '../screens';
+import {SplashScreen, SignIn, Home} from '../screens';
 
 const StackNavigator = createStackNavigator();
 
@@ -13,13 +13,13 @@ const Router = () => {
         options={{headerShown: false}}
       />
       <StackNavigator.Screen
-        name="Home"
-        component={Home}
+        name="SignIn"
+        component={SignIn}
         options={{headerShown: false}}
       />
       <StackNavigator.Screen
-        name="Profile"
-        component={Profile}
+        name="Home"
+        component={Home}
         options={{headerShown: false}}
       />
     </StackNavigator.Navigator>
