@@ -12,6 +12,10 @@
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
 
+// Maps Plugin
+#import <GoogleMaps/GoogleMaps.h>
+// End Maps Plugin
+
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
   SKDescriptorMapper *layoutDescriptorMapper = [[SKDescriptorMapper alloc] initWithDefaults];
@@ -27,10 +31,14 @@ static void InitializeFlipper(UIApplication *application) {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-#ifdef FB_SONARKIT_ENABLED
-  InitializeFlipper(application);
-#endif
+  // Maps Plugin
+  [GMSServices provideAPIKey:@"AIzaSyApsHHtxUDPsZmI29K3tayGP6NY4pmWFg8"];
+  // End Maps Plugin
 
+  #ifdef FB_SONARKIT_ENABLED
+    InitializeFlipper(application);
+  #endif
+  
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"Mastalent"

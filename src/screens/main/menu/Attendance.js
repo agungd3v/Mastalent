@@ -85,7 +85,7 @@ const Attendance = ({navigation}) => {
           <View style={styles.contentTopPdg}>
             <View style={styles.clockinout}>
               <View style={{flex: 1, marginRight: 5}}>
-                <Mainbtn text={'Clock In'} />
+                <Mainbtn text={'Clock In'} onPress={() => navigation.navigate('Clockin')} />
               </View>
               <View style={{flex: 1, marginLeft: 5}}>
                 <Mainbtn text={'Clock Out'} />

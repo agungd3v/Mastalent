@@ -1,6 +1,6 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {SplashScreen, SignIn, Home, Attendance} from '../screens';
+import {SplashScreen, SignIn, Home, Attendance, Clockin} from '../screens';
 
 const StackNavigator = createStackNavigator();
 
@@ -25,6 +25,11 @@ const Router = () => {
       <StackNavigator.Screen
         name="Attendance"
         component={Attendance}
+        options={{headerShown: false}}
+      />
+      <StackNavigator.Screen
+        name="Clockin"
+        component={Clockin}
         options={{headerShown: false}}
       />
     </StackNavigator.Navigator>

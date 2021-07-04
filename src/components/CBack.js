@@ -2,9 +2,9 @@ import React from 'react';
 import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import {ArrowLeft} from '../assets';
 
-const CBack = ({text, onPress}) => {
+const CBack = ({text, onPress, isClockinout = false}) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container(isClockinout)}>
       <TouchableOpacity activeOpacity={0.9} onPress={onPress}>
         <ArrowLeft />
       </TouchableOpacity>
@@ -18,11 +18,11 @@ const CBack = ({text, onPress}) => {
 export default CBack;
 
 const styles = StyleSheet.create({
-  container: {
+  container: isClockinout => ({
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: 30,
-  },
+    marginBottom: isClockinout ? 10 : 30,
+  }),
   titleWrapper: {
     flex: 1,
   },
