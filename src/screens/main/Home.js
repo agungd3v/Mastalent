@@ -7,7 +7,7 @@ import {style} from '../../helpers/styles';
 import LinearGradient from 'react-native-linear-gradient';
 import {Document, Profile, Discovery, Calendar, Activity, Ticket} from '../../assets';
 
-const Home = () => {
+const Home = ({navigation}) => {
   const [announcment, setAnnouncment] = useState([]);
   const [task, setTask] = useState([]);
   const [timesheet, setTimesheet] = useState([]);
@@ -31,7 +31,7 @@ const Home = () => {
             </View>
           </View>
           <View style={styles.iconWrapper}>
-            <TouchableOpacity activeOpacity={0.9}>
+            <TouchableOpacity activeOpacity={0.9} onPress={() => navigation.navigate('Attendance')}>
               <View style={styles.iconClick}>
                 <Document />
               </View>

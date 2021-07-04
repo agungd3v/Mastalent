@@ -4,5 +4,6 @@ import Discovery from './Iconly/Discovery.svg';
 import Calendar from './Iconly/Calendar.svg';
 import Activity from './Iconly/Activity.svg';
 import Ticket from './Iconly/Ticket.svg';
+import ArrowLeft from './Iconly/ArrowLeft.svg';
 
-export {Document, Profile, Discovery, Calendar, Activity, Ticket};
+export {Document, Profile, Discovery, Calendar, Activity, Ticket, ArrowLeft};
